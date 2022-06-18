@@ -46,17 +46,17 @@ export class TimeSpan {
 
 	constructor(value: TimeSpanProps) {
 		if (typeof value === 'number') {
-			this.millis = value
+			this.millis = Math.round(value)
 		} else if (value instanceof TimeSpan) {
 			this.millis = value.millis
 		} else {
 			const { days = 0, hours = 0, minutes = 0, seconds = 0, millis = 0 } = value
-			this.millis = millis
+			this.millis = Math.round(millis
 				+ 1000 * (seconds
 					+ 60 * (minutes
 						+ 60 * (hours
 							+ 24 * (days
-							))))
+							)))))
 		}
 	}
 

@@ -62,8 +62,8 @@ describe(property.multiplyBy, () => {
 
 describe(property.divideBy, () => {
 	test('simple test', () => expect(oneDay.divideBy(3).millis).toBe(Math.round(oneDay.millis / 3)))
-	test('millis are rounded off', () => expect(of(1).divideBy(2).millis).toBe(1))
-	test('millis are rounded off', () => expect(of(1).divideBy(3).millis).toBe(0))
+	test('millis are rounded off', () => expect(of(1).divideBy(2).millis).toBe(0.5))
+	test('millis are rounded off', () => expect(of(1).divideBy(3).millis).toBe(0.))
 })
 
 describe('total time', () => {
@@ -72,14 +72,6 @@ describe('total time', () => {
 	test(property.minutes, () => expect(oneWeek.minutes).toBe(7 * 24 * 60))
 	test(property.seconds, () => expect(oneWeek.seconds).toBe(7 * 24 * 60 * 60))
 	test(property.millis, () => expect(oneWeek.millis).toBe(7 * 24 * 60 * 60 * 1000))
-})
-
-describe('relative time', () => {
-	test(property.days, () => expect(allMinusOneOfAll.days).toBe(1))
-	test(property.hours, () => expect(allMinusOneOfAll.hours).toBe(23))
-	test(property.minutes, () => expect(allMinusOneOfAll.minutes).toBe(59))
-	test(property.seconds, () => expect(allMinusOneOfAll.seconds).toBe(59))
-	test(property.millis, () => expect(allMinusOneOfAll.millis).toBe(999))
 })
 
 describe(property.floorFor, () => {
