@@ -1,0 +1,40 @@
+{
+  "name": "npm-time-span",
+  "version": "1.0.0",
+  "description": "A simple typescript TimeSpan",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Baizey/npm-time-span"
+  },
+  "main": "lib/index.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "test": "jest --coverage"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/uuid": "^8.3.4",
+    "@types/jest": "^27.5.0",
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "jest": "^28.1.0",
+    "prettier": "^2.6.2",
+    "ts-jest": "^28.0.2",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4",
+    "uuid": "^8.3.2"
+  },
+  "keywords": [
+    "timespan",
+    "time"
+  ],
+  "author": "Baizey",
+  "license": "GPL-2.0-only"
+}
