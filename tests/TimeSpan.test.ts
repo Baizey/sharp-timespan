@@ -62,8 +62,8 @@ describe(property.multiplyBy, () => {
 
 describe(property.divideBy, () => {
 	test('simple test', () => expect(oneDay.divideBy(3).millis).toBe(Math.round(oneDay.millis / 3)))
-	test('millis are rounded off', () => expect(of(1).divideBy(2).millis).toBe(0.5))
-	test('millis are rounded off', () => expect(of(1).divideBy(3).millis).toBe(0.))
+	test('millis are rounded off', () => expect(of(1).divideBy(2).millis).toBe(1))
+	test('millis are rounded off', () => expect(of(1).divideBy(3).millis).toBe(0))
 })
 
 describe('total time', () => {
