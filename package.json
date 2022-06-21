@@ -1,6 +1,6 @@
 {
   "name": "sharp-time-span",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple typescript TimeSpan",
   "repository": {
     "type": "git",
