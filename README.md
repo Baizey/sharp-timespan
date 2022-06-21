@@ -26,6 +26,8 @@ TimeSpan.between(SpanProps, SpanProps)
 
 Note: TimeSpan is immutable, all functions return new instances
 
+import { TimeSpan, oneDay, oneHour, oneWeek, oneSecond } from 'sharp-time-span'
+
 TimeSpan.of(SpanProps) shorthand for new TimeSpan(SpanProps)
 
 TimeSpan.between(Date|number, Date|number)
@@ -44,15 +46,15 @@ TimeSpan.oneSecond
 TimeSpan.zero
 
 Utility functions:
-TimeSpan.oneDay.multiplyBy(Number(5)) // TimeSpan of 5 days
-TimeSpan.oneDay.as('hours') // Number(24)
-TimeSpan.oneDay.hours // Number(24)
-TimeSpan.oneSecond.millis // 1000
-TimeSpan.oneDay.isGreaterThan(TimeSpan.oneHour) // true
-TimeSpan.oneDay.isLessThan(TimeSpan.oneHour) // false
-TimeSpan.oneDay.isEqualTo(TimeSpan.of({ days: 1 })) // true
-TimeSpan.oneDay.plus( TimeSpan.oneDay ) // TimeSpan of 2 days
-TimeSpan.oneDay.minus( TimeSpan.oneHour ) // TimeSpan of 23 hours
+oneDay.multiplyBy(Number(5)) // TimeSpan of 5 days
+oneDay.as('hours') // Number(24)
+oneDay.hours // Number(24)
+oneSecond.millis // 1000
+oneDay.isGreaterThan(oneHour) // true
+oneDay.isLessThan(oneHour) // false
+oneDay.isEqualTo(TimeSpan.of({ days: 1 })) // true
+oneDay.plus( oneDay ) // TimeSpan of 2 days
+oneDay.minus( oneHour ) // TimeSpan of 23 hours
 TimeSpan.of({ days: 1 }).negate() // TimeSpan of -1 day
 TimeSpan.of({ days: -1 }).negate() // TimeSpan of 1 day
 TimeSpan.of({ days: 1 }).asAbsolute() // TimeSpan of 1 day
@@ -68,7 +70,6 @@ TimeSpan.of({ days: 1, hours: -12 }).roundFor('days') // TimeSpan of -2 days
 
 Use-case example:
 
-const { oneDay } = TimeSpan
 const lastUpdate = new Date(...)
 
 if (TimeSpan.since(lastUpdate).isGreaterThan(oneDay)) {
