@@ -27,14 +27,13 @@ TimeSpan.between(SpanProps, SpanProps)
 Note: TimeSpan is immutable, all functions return new instances
 
 TimeSpan.of(SpanProps) shorthand for new TimeSpan(SpanProps)
-TimeSpan.now() shorthand for TimeSpan.of(Date.now())
 
-TimeSpan.between(from: SpanProps, to: SpanProps)
+TimeSpan.between(Date|number, Date|number)
 TimeSpan.between(new date(2020), new Date(2040)) // TimeSpan of 20 years
 TimeSpan.between(new date(2040), new Date(2020)) // TimeSpan of -20 years
 
-TimeSpan.until(SpanProps) shorthand for TimeSpan.between(Date.now(), SpanProps)
-TimeSpan.since(SpanProps) shorthand for TimeSpan.between(SpanProps, Date.now())
+TimeSpan.until(Date|number) shorthand for TimeSpan.between(Date.now(), SpanProps)
+TimeSpan.since(Date|number) shorthand for TimeSpan.between(SpanProps, Date.now())
 
 Static constants:
 TimeSpan.oneWeek
@@ -47,7 +46,7 @@ TimeSpan.zero
 Utility functions:
 TimeSpan.oneDay.multiplyBy(Number(5)) // TimeSpan of 5 days
 TimeSpan.oneDay.as('hours') // Number(24)
-TimeSpan.of(new Date(2020, 1, 1)).plus(TimeSpan.oneDay).asDate() // Date(2020-01-02T00:00:00Z)
+TimeSpan.oneDay.hours // Number(24)
 TimeSpan.oneSecond.millis // 1000
 TimeSpan.oneDay.isGreaterThan(TimeSpan.oneHour) // true
 TimeSpan.oneDay.isLessThan(TimeSpan.oneHour) // false
