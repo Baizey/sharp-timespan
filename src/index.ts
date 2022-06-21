@@ -9,14 +9,6 @@ type DateProps =
 	| Date
 
 export class TimeSpan {
-	static readonly oneWeek = TimeSpan.of({ days: 7 })
-	static readonly oneDay = TimeSpan.of({ days: 1 })
-	static readonly oneHour = TimeSpan.of({ hours: 1 })
-	static readonly halfHour = TimeSpan.of({ minutes: 30 })
-	static readonly fiveMinutes = TimeSpan.of({ minutes: 5 })
-	static readonly oneMinute = TimeSpan.of({ minutes: 1 })
-	static readonly halfMinute = TimeSpan.of({ seconds: 30 })
-	static readonly oneSecond = TimeSpan.of({ seconds: 1 })
 
 	public static of(props: TimeSpanProps) { return new TimeSpan(props) }
 
@@ -110,3 +102,12 @@ export class TimeSpan {
 		}
 	}
 }
+
+export const oneWeek = TimeSpan.of({ days: 7 })
+export const oneDay = TimeSpan.of({ days: 1 })
+export const oneHour = TimeSpan.of({ hours: 1 })
+export const halfHour = TimeSpan.of({ minutes: 30 })
+export const fiveMinutes = TimeSpan.of({ minutes: 5 })
+export const oneMinute = TimeSpan.of({ minutes: 1 })
+export const halfMinute = TimeSpan.of({ seconds: 30 })
+export const oneSecond = TimeSpan.of({ seconds: 1 })

@@ -1,6 +1,12 @@
-import { TimeSpan } from '../src'
+import {
+	oneDay,
+	oneHour,
+	oneMinute,
+	oneWeek,
+	TimeSpan,
+} from '../src'
 
-const { oneDay, oneMinute, oneHour, oneWeek, of } = TimeSpan
+const { of } = TimeSpan
 
 const oneOfAll = of({ days: 1, hours: 1, minutes: 1, seconds: 1, millis: 1 })
 const halfOfAll = of({ days: 1, hours: 12, minutes: 30, seconds: 30, millis: 500 })
